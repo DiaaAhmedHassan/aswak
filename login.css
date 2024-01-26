@@ -1,0 +1,65 @@
+.login-form{
+    background-image: linear-gradient(#7ff2e5 60%,#7ff2e55b) ;
+    border-radius: 10px;
+    padding: 30px;
+    width: 50vh;
+    height: 115vh;
+    float: right;
+}
+.login-btn{
+    background-color:#00bea4;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+.input-field{
+    background-color:#00bea588;
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+.labels{
+    font-size: 20px;
+}
+
+.options{
+    margin-bottom: 30px;
+    background-color:#00bea588;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+      
+}
+
+.background{
+    background-image: url("images/market.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vh;
+}
+
+.avatar{
+    border-radius: 100px;
+    width: 100px ;
+    height:100px;
+}
+
+.btn-select{
+    background-color:#00bea4;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
