@@ -1,3 +1,4 @@
+<?php include 'reg.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +8,13 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body class="background">
+    
     <form method="post">
         <div class="login-form">
             <h2>Welcome to aswak </h2>
             <div class="options">
                 
-                <input type="radio" id="customer" value="customer" name="usertype">
+                <input type="radio" id="customer" value="customer" name="usertype" checked="true">
                 <label class="labels" for="customer">customer</label>
                 <input type="radio" value="seller" name="usertype">
                 <label class="labels" for="customer">Seller</label>
@@ -45,13 +47,13 @@
        
             <label class="labels">confirm password</label>
             <br>
-            <input type="password" name="password" placeholder="retype password" class="input-field"/>
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="retype password" class="input-field"/>
             <br><br>
             
-            <input type="submit" value="Register" class="login-btn"/>
+            <input type="submit" value="Register" name="submit" id="submit" class="login-btn"/>
             <br><br>
             <label class="labels">already have an account </label>
-            <a class="labels" href="login.html">login here </a>
+            <a class="labels" href="login.php">login here </a>
         </div>
         </div>
     </form>

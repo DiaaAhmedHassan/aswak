@@ -1,3 +1,4 @@
+<?php include 'log.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,23 +13,24 @@
             <h2>Welcome to aswak </h2>
             <div class="options">
                 
-                <input type="radio" id="customer" value="customer" name="usertype">
+                <input type="radio" id="customer" value="customer" name="usertype" checked="true">
                 <label class="labels" for="customer">customer</label>
                 <input type="radio" value="seller" name="usertype">
                 <label class="labels" for="customer">Seller</label>
             </div>
+
             <label class="labels">Email or username</label>
             <br>
-            <input type="text" placeholder="Email or username" class="input-field"/>
+            <input type="text" name="emailUser" id="emailUser" placeholder="Email or username" class="input-field"/>
             <br><br>
             <label class="labels">password</label>
             <br>
-            <input type="password" placeholder="password" class="input-field"/>
+            <input type="password" name="password" id="password" placeholder="password" class="input-field"/>
             <br><br>
-            <input type="submit" value="Login" class="login-btn"/>
+            <input type="submit" name="submit" id="submit" value="Login" class="login-btn"/>
             <br><br>
             <label class="labels">Don't have an account yet </label>
-            <a class="labels" href="register.html"> register here </a>
+            <a class="labels" href="register.php"> register here </a>
         </div>
     </form>
 </body>
