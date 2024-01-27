@@ -10,6 +10,8 @@ if(isset($_POST['submit'])){
     $password = $_POST["password"];
     $confirm_pass = $_POST["confirmpassword"];
 
+
+
     $userType = $_POST["userType"];
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -21,13 +23,19 @@ if(isset($_POST['submit'])){
     }else{
         if($confirm_pass == $password){
 
-            if($userType == "customer"){
-            $query = "INSERT INTO CUSTOMER (name, email, password, phone) VALUES ('$username', '$email', '$hashed_password', '$phone')";
-            }else{
-                $query = "INSERT INTO SELLER (name, email, password, phone) VALUES ('$username', '$email', '$hashed_password', '$phone')";
+            
+            $query = "INSERT INTO CUSTOMER (name, email, password, phone, image) VALUES ('$username', '$email', '$hashed_password', '$phone')";
+            $result = mysqli_query($conn, "SELECT * FROM CUSTOMER WHERE email = '$email'");
+            $row = mysqli_fetch_assoc($result);
+
+           if($userType == "SELLER"){
+                $query = "INSERT INTO SELLER (name, email, password, phone, image) VALUES ('$username', '$email', '$hashed_password', '$phone')";
+                $result = mysqli_query($conn, "SELECT * FROM SELLER WHERE email = '$email'");
+                $row = mysqli_fetch_assoc($result);
 
             }
            
+            
             mysqli_query($conn, $query);
             echo"<script>alert(\"registeration succesfull\");</script>";
                 sleep(3);

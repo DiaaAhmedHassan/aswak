@@ -23,7 +23,7 @@
             <img src="images/avatar.jpg" class="avatar">
             <br><br>
             <label for="file-input">Select an image</label>
-            <input type="file" accept="images/*" style="display: none;" id="file-input">
+            <input type="file" accept="images/*" style="display: none;" id="file-input" name="file-input">
             <br><br>
         </div>
 
