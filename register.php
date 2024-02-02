@@ -9,7 +9,7 @@
 </head>
 <body class="background">
     
-    <form method="post">
+    <form method="POST" enctype="multipart/form-data">
         <div class="login-form">
             <h2>Welcome to aswak </h2>
             <div class="options">
@@ -19,11 +19,13 @@
                 <input type="radio" value="seller" name="usertype">
                 <label class="labels" for="customer">Seller</label>
             </div>
+
         <div style="text-align: center;">
-            <img src="images/avatar.jpg" class="avatar">
+            <img src="images/avatar.jpg" class="avatar" id="avatar-image">
             <br><br>
-            <label for="file-input">Select an image</label>
-            <input type="file" accept="images/*" style="display: none;" id="file-input" name="file-input">
+            <label for="file-input" name="selection-btn">Select an image</label>
+            <input type="file" accept="images/*" style="display: none" id="file-input" name="file-input">
+            <input type="hidden" id="image-url" name="image-url"/>
             <br><br>
         </div>
 
@@ -57,5 +59,8 @@
         </div>
         </div>
     </form>
+
+    <script src="js/reg.js"></script>
+   
 </body>
 </html>

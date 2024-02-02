@@ -5,7 +5,8 @@ CREATE TABLE customer(
     email varchar(50) UNIQUE NOT NULL,
     Name varchar(50) NOT NULL,
     password varchar(20) NOT NULL,
-    image varchar(20),
+    phone varchar(11),
+    image varchar(100),
     
     PRIMARY KEY(id)
 );
@@ -15,7 +16,8 @@ CREATE TABLE seller(
     email varchar(50) UNIQUE NOT NULL,
     password varchar(20) NOT NULL,
     Name varchar(50) NOT NULL, 
-    image varchar(30),
+    phone varchar(11),
+    image varchar(100),
     
     PRIMARY KEY(id)
 );
@@ -39,7 +41,7 @@ CREATE TABLE order_item(
 CREATE TABLE item(
     id int,
     Name varchar(30) NOT NULL,
-    image varchar(20) NOT NULL,
+    image varchar(100) NOT NULL,
     price float NOT NULL,
     seller_id int NOT NULL,
     rating float,
@@ -51,7 +53,7 @@ CREATE TABLE item(
 CREATE TABLE category(
     id int,
     Name varchar(25) NOT NULL,
-    image varchar(30),
+    image varchar(100),
     
     PRIMARY KEY(id)
 );
@@ -64,3 +66,9 @@ ADD FOREIGN KEY(customer_id) REFERENCES customer(id);
 
 ALTER TABLE item
 ADD FOREIGN KEY(category_id) REFERENCES category(id);
+
+Alter TABLE order_item
+ADD FOREIGN KEY(order_id) REFERENCES `order`(order_id);
+
+Alter TABLE order_item
+ADD FOREIGN KEY(item_id) REFERENCES item(id);

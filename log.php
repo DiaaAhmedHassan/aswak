@@ -19,8 +19,8 @@ if(isset($_POST['submit'])){
         if(password_verify($password, $row['password'])){
             $_SESSION["login"] = true;
             $_SESSION["client_id"] = $row["id"];
-            $_SERVER["client_name"] = $row["name"];
-            header("Location: home.html");
+            $_SESSION["client_name"] = $row["name"];
+            header("Location: home.php");
         }else{
             echo "<script>alert(\"incorrect password\")</script>";
         }
